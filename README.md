@@ -6,21 +6,21 @@
     />
     <img
       src=".github/assets/readme-banner_light.jpg"
-      alt="__REPO__ repository banner"
+      alt="test-template repository banner"
     />
   </picture>
 </p>
 
-<p align="right">__REPO__ a project by __OWNER__</p>
+<p align="right">test-template a project by RR-Gary-Stringham</p>
 
-# __REPO__
+# test-template
 
 <div align="left">
-  <a href="https://github.com/__OWNER__/__REPO__/issues">
-    <img src="https://img.shields.io/github/issues/__OWNER__/__REPO__?color=163666&style=for-the-badge&logo=github" alt="Issues"/>
+  <a href="https://github.com/RR-Gary-Stringham/test-template/issues">
+    <img src="https://img.shields.io/github/issues/RR-Gary-Stringham/test-template?color=163666&style=for-the-badge&logo=github" alt="Issues"/>
   </a>
-  <a href="https://github.com/__OWNER__/__REPO__/pulls">
-    <img src="https://img.shields.io/github/issues-pr/__OWNER__/__REPO__?color=71c9c5&style=for-the-badge&logo=github" alt="PRs"/>
+  <a href="https://github.com/RR-Gary-Stringham/test-template/pulls">
+    <img src="https://img.shields.io/github/issues-pr/RR-Gary-Stringham/test-template?color=71c9c5&style=for-the-badge&logo=github" alt="PRs"/>
   </a>
 </div>
 
