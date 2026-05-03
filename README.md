@@ -11,9 +11,9 @@
   </picture>
 </p>
 
-<p align="right">test-template a project by RR-Gary-Stringham</p>
+<p align="right">test-template a project by REVREBEL</p>
 
-# test-template
+# TEST-TEMPLATE
 
 <div align="left">
   <a href="https://github.com/RR-Gary-Stringham/test-template/issues">
