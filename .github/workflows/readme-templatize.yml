@@ -21,7 +21,9 @@ jobs:
         run: |
           OWNER="${{ github.repository_owner }}"
           REPO="${{ github.event.repository.name }}"
+          REPO_UPPER="$(printf '%s' "$REPO" | tr '[:lower:]' '[:upper:]')"
           sed -i.bak "s#__OWNER__#${OWNER}#g" README.md || true
+          sed -i.bak "s#__REPO_UPPER__#${REPO_UPPER}#g" README.md || true
           sed -i.bak "s#__REPO__#${REPO}#g" README.md || true
           rm -f README.md.bak
 
