@@ -22,12 +22,24 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v6
 
+      - name: Check for banner generator
+        id: generator
+        run: |
+          if [ -f scripts/generate-readme-banner.mjs ]; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+            echo "scripts/generate-readme-banner.mjs not found; skipping banner generation."
+          fi
+
       - name: Set up Node.js
+        if: steps.generator.outputs.exists == 'true'
         uses: actions/setup-node@v6
         with:
           node-version: '24'
 
       - name: Install dependencies if package.json exists
+        if: steps.generator.outputs.exists == 'true'
         run: |
           if [ -f package-lock.json ]; then
             npm ci
@@ -38,11 +50,13 @@ jobs:
           fi
 
       - name: Generate README banners
+        if: steps.generator.outputs.exists == 'true'
         env:
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: node scripts/generate-readme-banner.mjs
 
       - name: Commit generated banners
+        if: steps.generator.outputs.exists == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
